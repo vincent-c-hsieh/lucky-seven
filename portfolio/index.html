@@ -2,9 +2,66 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Lucky Seven</title>
+    <title>Lucky Sevens</title>
+    <!-- external css -->
+    <link rel="stylesheet" href="luckysevens.css">
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   </head>
   <body>
+    <h1 class="text-center titleL7">Lucky Sevens</h1>
+    <div class="container">
+      <form name="luckySeven" method="post" onsubmit="return throwDice();">
+        <div class="menuBox">
+          <div class="row">
+            <div class="col-sm-6">
+              <h4 class="text-center">Starting Bet</h4>
+            </div>
+            <div class="col-sm-6 input-group" id="inputResize">
+                <div class="input-group-prepend h30">
+                  <span class="input-group-text">$</span>
+                </div>
+                <input class="moneyInput h30" type="number" id="bet" name="bet" value="">
+                <div class="input-group-append h30">
+                  <span class="input-group-text">.00</span>
+                </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="submitButton">
+          <input type="submit" class="btn btn-primary" id="submitBtn" value="Play">
+        </div>
+      </form>
+    </div>
+    <div id="results" class="container" style="display:none;">
+      <hr>
+      <h2 class="text-center">Resaults</h2>
+      <table class="table table-striped">
+        <tr>
+          <td>Starting Bet</td>
+          <td id="startBet"></td>
+        </tr>
+        <tr>
+          <td>Total Rolls Before Going Broke</td>
+          <td id="rollBroke"></td>
+        </tr>
+        <tr>
+          <td>Highest Amount Won</td>
+          <td id="highestWon"></td>
+        </tr>
+        <tr>
+          <td>Roll Count at Highest Amount Won</td>
+          <td id="rollWon"></td>
+        </tr>
 
+      </table>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
+
 </html>
